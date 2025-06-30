@@ -5,7 +5,7 @@ Query OK, 1 row affected (0.01 sec)
 mysql> USE school_lib;
 Database changed
 
--- Step 1: Create Student and Course Tables
+: Create Student and Course Tables
 mysql> CREATE TABLE Student (
     -> student_id INT PRIMARY KEY,
     -> name VARCHAR(100),
@@ -21,7 +21,9 @@ mysql> CREATE TABLE Course (
     -> );
 Query OK, 0 rows affected (0.02 sec)
 
--- Step 2: Insert Records into Student
+--
+
+ Insert Records into Student
 mysql> INSERT INTO Student VALUES (1, 'Ishu', 20, 101);
 Query OK, 1 row affected (0.01 sec)
 
@@ -37,7 +39,7 @@ Query OK, 1 row affected (0.01 sec)
 mysql> INSERT INTO Student VALUES (5, 'Ravi', 20, 102);
 Query OK, 1 row affected (0.01 sec)
 
--- Step 3: Insert Records into Course
+: Insert Records into Course
 mysql> INSERT INTO Course VALUES (101, 'Mathematics', 500.00);
 Query OK, 1 row affected (0.01 sec)
 
@@ -53,12 +55,12 @@ Query OK, 1 row affected (0.01 sec)
 mysql> INSERT INTO Course VALUES (105, 'English', 450.00);
 Query OK, 1 row affected (0.01 sec)
 
--- Step 4: Update Course Fees
+Update Course Fees
 mysql> UPDATE Course SET fees = fees + 50 WHERE course_name = 'Mathematics';
 Query OK, 1 row affected (0.01 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
--- Step 5: Verify Course Table
+ Verify Course Table
 mysql> SELECT * FROM Course;
 +-----------+-------------+--------+
 | course_id | course_name | fees   |
@@ -71,7 +73,7 @@ mysql> SELECT * FROM Course;
 +-----------+-------------+--------+
 5 rows in set (0.01 sec)
 
--- Step 6: Create Library Tables
+Create Library Tables
 mysql> CREATE TABLE Books (
     -> book_id INT PRIMARY KEY,
     -> title VARCHAR(100),
@@ -94,7 +96,7 @@ mysql> CREATE TABLE Transactions (
     -> );
 Query OK, 0 rows affected (0.02 sec)
 
--- Step 7: Populate Books
+ Populate Books
 mysql> INSERT INTO Books VALUES (1, 'Java Programming', 'James Gosling');
 Query OK, 1 row affected (0.01 sec)
 
@@ -104,7 +106,7 @@ Query OK, 1 row affected (0.01 sec)
 mysql> INSERT INTO Books VALUES (3, 'Operating Systems', 'Andrew Tanenbaum');
 Query OK, 1 row affected (0.01 sec)
 
--- Step 8: Populate Members
+ Populate Members
 mysql> INSERT INTO Members VALUES (1, 'Sara', '2024-05-10');
 Query OK, 1 row affected (0.01 sec)
 
@@ -114,7 +116,9 @@ Query OK, 1 row affected (0.01 sec)
 mysql> INSERT INTO Members VALUES (3, 'Nina', '2024-06-20');
 Query OK, 1 row affected (0.01 sec)
 
--- Step 9: Populate Transactions
+-
+
+ Populate Transactions
 mysql> INSERT INTO Transactions VALUES (1,1,2,'2024-06-15');
 Query OK, 1 row affected (0.01 sec)
 
@@ -124,7 +128,7 @@ Query OK, 1 row affected (0.01 sec)
 mysql> INSERT INTO Transactions VALUES (3,3,3,'2024-06-20');
 Query OK, 1 row affected (0.01 sec)
 
--- Step 10: Create Department and Employee Tables
+Create Department and Employee Tables
 mysql> CREATE TABLE Department (
     -> dept_id INT PRIMARY KEY,
     -> dept_name VARCHAR(100)
@@ -138,7 +142,7 @@ mysql> CREATE TABLE Employee (
     -> );
 Query OK, 0 rows affected (0.02 sec)
 
--- Step 11: Populate Department
+ Populate Department
 mysql> INSERT INTO Department VALUES (1, 'HR');
 Query OK, 1 row affected (0.01 sec)
 
@@ -148,7 +152,7 @@ Query OK, 1 row affected (0.01 sec)
 mysql> INSERT INTO Department VALUES (3, 'Finance');
 Query OK, 1 row affected (0.01 sec)
 
--- Step 12: Populate Employee with names Ishu, Sana, Harithra, Reha, & Ravi
+ Populate Employee with names Ishu, Sana, Harithra, Reha, & Ravi
 mysql> INSERT INTO Employee VALUES (1, 'Ishu', 2);
 Query OK, 1 row affected (0.01 sec)
 
@@ -164,7 +168,7 @@ Query OK, 1 row affected (0.01 sec)
 mysql> INSERT INTO Employee VALUES (5, 'Ravi', 1);
 Query OK, 1 row affected (0.01 sec)
 
--- Step 13: Final Verification
+ Final Verification
 mysql> SELECT * FROM Employee;
 +--------+-----------+---------+
 | emp_id | emp_name  | dept_id |
